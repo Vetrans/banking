@@ -1,0 +1,1111 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #dddddd;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #5c5c7b;
+  border-radius: 50px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #7878a3;
+}
+
+@layer utilities {
+  .input-class {
+    font-size: 16px; /* Equivalent of text-16 */
+    border-radius: 8px; /* Equivalent of rounded-lg */
+    border: 1px solid #d1d5db; /* Equivalent of border-gray-300 */
+    color: #111827; /* Equivalent of text-gray-900 */
+  }
+
+  .sheet-content button {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important; /* Removes focus ring and offsets */
+}
+
+.text14_padding10 {
+  font-size: 14px; /* Equivalent to text-14 */
+  padding: 10px 16px; /* px-4 → 16px, py-2.5 → 10px */
+  font-weight: 600; /* Equivalent to font-semibold */
+}
+
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.header-2 {
+  font-size: 18px; /* Replace text-18 with manual font size */
+  font-weight: 600; /* Equivalent to font-semibold */
+  color: #111827; /* Equivalent to text-gray-900 */
+}
+
+
+.text-10 {
+  font-size: 10px; /* Equivalent to text-[10px] */
+  line-height: 14px; /* Equivalent to leading-[14px] */
+}
+
+
+.text-12 {
+  font-size: 12px; /* Equivalent to text-[12px] */
+  line-height: 16px; /* Equivalent to leading-[16px] */
+}
+
+
+.text-14 {
+  font-size: 14px; /* Equivalent to text-[14px] */
+  line-height: 20px; /* Equivalent to leading-[20px] */
+}
+
+
+.text-16 {
+  font-size: 16px; /* Equivalent to text-[16px] */
+  line-height: 24px; /* Equivalent to leading-[24px] */
+}
+
+.text-18 {
+  font-size: 18px; /* Equivalent to text-[18px] */
+  line-height: 22px; /* Equivalent to leading-[22px] */
+}
+
+
+.text-20 {
+  font-size: 20px; /* Equivalent to text-[20px] */
+  line-height: 24px; /* Equivalent to leading-[24px] */
+}
+
+
+.text-24 {
+  font-size: 24px; /* Equivalent to text-[24px] */
+  line-height: 30px; /* Equivalent to leading-[30px] */
+}
+
+
+.text-26 {
+  font-size: 26px; /* Equivalent to text-[26px] */
+  line-height: 32px; /* Equivalent to leading-[32px] */
+}
+
+.text-30 {
+  font-size: 30px; /* Equivalent to text-[30px] */
+  line-height: 38px; /* Equivalent to leading-[38px] */
+}
+
+
+.text-36 {
+  font-size: 36px; /* Equivalent to text-[36px] */
+  line-height: 44px; /* Equivalent to leading-[44px] */
+}
+
+
+  /* Home */
+  .home {
+    /* Removes scrollbar styling */
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer/Edge */
+
+    /* Flex properties */
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+
+    /* Responsive adjustments */
+    @media (max-width: 1280px) {
+        max-height: 100vh;
+        overflow-y: scroll;
+    }
+}
+
+/* Hides scrollbar for WebKit browsers */
+.home::-webkit-scrollbar {
+    display: none;
+}
+
+
+.home-content {
+  /* Removes scrollbar styling */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer/Edge */
+
+  /* Flex properties */
+  display: flex;
+  width: 100%;
+  flex: 1;
+  flex-direction: column;
+  gap: 2rem; /* Equivalent to Tailwind's gap-8 */
+
+  /* Padding */
+  padding: 1.75rem 1.25rem; /* Equivalent to py-7 px-5 */
+}
+
+/* Small screens (sm:px-8) */
+@media (min-width: 640px) {
+  .home-content {
+      padding-left: 2rem;
+      padding-right: 2rem;
+  }
+}
+
+/* Large screens (lg:py-12) */
+@media (min-width: 1024px) {
+  .home-content {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+  }
+}
+
+/* Extra large screens (xl:max-h-screen xl:overflow-y-scroll) */
+@media (min-width: 1280px) {
+  .home-content {
+      max-height: 100vh;
+      overflow-y: scroll;
+  }
+}
+
+/* Hides scrollbar for WebKit browsers */
+.home-content::-webkit-scrollbar {
+  display: none;
+}
+
+
+.home-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem; /* Equivalent to Tailwind's gap-8 */
+}
+
+
+.total-balance {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 1rem; /* Equivalent to Tailwind's gap-4 */
+  border-radius: 0.75rem; /* Equivalent to Tailwind's rounded-xl */
+  border: 1px solid #e5e7eb; /* Equivalent to Tailwind's border-gray-200 */
+  padding: 1rem; /* Equivalent to Tailwind's p-4 */
+  box-shadow: var(--shadow-chart); /* Assuming you have a custom shadow */
+}
+
+@media (min-width: 640px) { /* sm: breakpoint */
+  .total-balance {
+      gap: 1.5rem; /* Equivalent to Tailwind's sm:gap-6 */
+      padding: 1.5rem; /* Equivalent to Tailwind's sm:p-6 */
+  }
+}
+
+
+.total-balance-chart {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  max-width: 100px;
+  align-items: center;
+}
+
+@media (min-width: 640px) { /* sm: breakpoint */
+  .total-balance-chart {
+      max-width: 120px;
+  }
+}
+
+
+.total-balance-label {
+  font-size: 14px;
+  line-height: 20px; /* Ensuring consistency with other text-14 definitions */
+  font-weight: 500; /* Medium */
+  color: #4B5563; /* Tailwind's gray-600 */
+}
+
+
+.total-balance-amount {
+  font-size: 24px;
+  line-height: 30px; /* Matches text-24 */
+  font-weight: 600; /* Semibold */
+  color: #111827; /* Tailwind's gray-900 */
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+  .total-balance-amount {
+      font-size: 30px;
+      line-height: 38px; /* Matches text-30 */
+  }
+}
+
+
+.recent-transactions {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1.5rem; /* Equivalent to Tailwind's gap-6 */
+}
+
+
+.view-all-btn {
+  font-size: 14px;
+  border-radius: 0.5rem; /* Equivalent to rounded-lg */
+  border: 1px solid #D1D5DB; /* Equivalent to border-gray-300 */
+  padding: 10px 16px; /* Equivalent to px-4 py-2.5 */
+  font-weight: 600; /* Equivalent to font-semibold */
+  color: #374151; /* Equivalent to text-gray-700 */
+}
+
+
+.recent-transactions {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1.5rem; /* Equivalent to gap-6 */
+}
+
+
+.recent-transactions-label {
+  font-size: 20px; /* Default text-20 */
+  line-height: 24px;
+  font-weight: 600; /* font-semibold */
+  color: #1f2937; /* text-gray-900 */
+
+  /* Medium screen (md) breakpoint */
+}
+@media (min-width: 768px) { /* md */
+  .recent-transactions-label {
+      font-size: 24px; /* md:text-24 */
+      line-height: 30px;
+  }
+}
+
+
+.recent-transactions-tablist {
+  margin-bottom: 2rem; /* mb-8 */
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  overflow-x: auto; /* Assuming horizontal scrolling */
+}
+
+/* Custom scrollbar styles */
+.recent-transactions-tablist::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.recent-transactions-tablist::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.recent-transactions-tablist::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+
+.recent-transactions-tablist::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
+}
+
+
+  /* Right sidebar */
+  .right-sidebar {
+    display: none; /* hidden */
+    height: 100vh; /* h-screen */
+    max-height: 100vh; /* max-h-screen */
+    flex-direction: column; /* flex-col */
+    border-left: 1px solid #e5e7eb; /* border-l border-gray-200 */
+    width: 355px; /* w-[355px] */
+    overflow-y: auto; /* xl:overflow-y-scroll */
+}
+
+/* Show sidebar only on extra-large screens */
+@media (min-width: 1280px) { /* Tailwind's xl breakpoint */
+    .right-sidebar {
+        display: flex;
+    }
+}
+
+/* Custom scrollbar removal */
+.right-sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+.right-sidebar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+
+.profile-banner {
+  height: 120px; /* h-[120px] */
+  width: 100%; /* w-full */
+  background-image: var(--bg-gradient-mesh); /* bg-gradient-mesh (Assuming it's a CSS variable) */
+  background-size: cover; /* bg-cover */
+  background-repeat: no-repeat; /* bg-no-repeat */
+}
+
+
+.profile {
+  position: relative; /* relative */
+  display: flex; /* flex */
+  padding-left: 1.5rem; /* px-6 (24px) */
+  padding-right: 1.5rem; /* px-6 (24px) */
+}
+
+@media (max-width: 1280px) { /* max-xl */
+  .profile {
+      justify-content: center; /* max-xl:justify-center */
+  }
+}
+
+
+.profile-img {
+  display: flex; /* flex */
+  align-items: center; /* items-center */
+  justify-content: center; /* justify-center */
+  position: absolute; /* absolute */
+  top: -2rem; /* -top-8 (-32px) */
+  width: 6rem; /* size-24 (96px) */
+  height: 6rem; /* size-24 (96px) */
+  border-radius: 50%; /* rounded-full */
+  background-color: #f3f4f6; /* bg-gray-100 */
+  border: 8px solid #ffffff; /* border-8 border-white */
+  padding: 0.5rem; /* p-2 (8px) */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+              0 1px 3px rgba(0, 0, 0, 0.06); /* shadow-profile */
+}
+
+
+.profile-details {
+  display: flex; /* flex */
+  flex-direction: column; /* flex-col */
+  padding-top: 6rem; /* pt-24 (96px) */
+}
+
+
+.profile-name {
+  font-size: 24px; /* text-24 */
+  font-weight: 600; /* font-semibold */
+  color: #1f2937; /* text-gray-900 */
+}
+
+
+.profile-email {
+  font-size: 16px; /* text-16 */
+  font-weight: 400; /* font-normal */
+  color: #4b5563; /* text-gray-600 */
+}
+
+
+.banks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 24px; /* px-6 py-8 */
+}
+
+
+  /* My Banks */
+  .my-banks {
+    display: flex;
+    height: 100vh;
+    max-height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+    background-color: #f9fafb; /* Equivalent to bg-gray-25 */
+    padding: 32px; /* p-8 */
+}
+
+@media (min-width: 1280px) { /* xl breakpoint */
+    .my-banks {
+        padding-top: 48px;  /* xl:py-12 */
+        padding-bottom: 48px; /* xl:py-12 */
+    }
+}
+
+
+  /* My Banks */
+  .transactions {
+    display: flex;
+    max-height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+    overflow-y: scroll;
+    background-color: #f9fafb; /* Equivalent to bg-gray-25 */
+    padding: 32px; /* p-8 */
+}
+
+@media (min-width: 1280px) { /* xl breakpoint */
+    .transactions {
+        padding-top: 48px;  /* xl:py-12 */
+        padding-bottom: 48px; /* xl:py-12 */
+    }
+}
+
+
+.transactions-header {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+  .transactions-header {
+      flex-direction: row;
+  }
+}
+
+
+.transactions-account {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px; /* Equivalent to gap-4 */
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  background-color: #2563eb; /* Equivalent to bg-blue-600 */
+  padding: 20px 16px; /* Equivalent to px-4 py-5 */
+  border-radius: 8px; /* Equivalent to rounded-lg */
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+  .transactions-account {
+      flex-direction: row;
+  }
+}
+
+
+.transactions-account-balance {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px; /* Equivalent to gap-2 */
+  border-radius: 6px; /* Equivalent to rounded-md */
+  background-color: rgba(219, 234, 254, 0.2); /* Equivalent to bg-blue-25/20 */
+  padding: 8px 16px; /* Equivalent to px-4 py-2 */
+  color: white;
+}
+
+
+.header-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* Equivalent to gap-1 */
+}
+
+
+.header-box-title {
+  font-size: 24px; /* Equivalent to text-24 */
+  line-height: 30px; /* Adjusted for readability */
+  font-weight: 600; /* Equivalent to font-semibold */
+  color: #1f2937; /* Equivalent to text-gray-900 */
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+  .header-box-title {
+      font-size: 30px; /* Equivalent to lg:text-30 */
+      line-height: 38px;
+  }
+}
+
+
+.header-box-subtext {
+  font-size: 14px; /* Equivalent to text-14 */
+  line-height: 20px; /* Adjusted for readability */
+  font-weight: 400; /* Equivalent to font-normal */
+  color: #4b5563; /* Equivalent to text-gray-600 */
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+  .header-box-subtext {
+      font-size: 16px; /* Equivalent to lg:text-16 */
+      line-height: 24px;
+  }
+}
+
+  /* Bank Card */
+  .bank-card {
+    position: relative;
+    display: flex;
+    height: 190px;
+    width: 100%;
+    max-width: 320px;
+    justify-content: space-between;
+    border-radius: 20px;
+    border: 1px solid white;
+    background: var(--bank-gradient); /* Assuming you have a defined gradient */
+    box-shadow: var(--creditCard-shadow); /* Assuming a predefined shadow */
+    backdrop-filter: blur(6px);
+}
+
+
+.bank-card_content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  max-width: 228px;
+  flex-direction: column;
+  justify-content: space-between;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: #374151; /* Equivalent to bg-gray-700 */
+  background: var(--bank-gradient); /* Assuming you have a predefined gradient */
+  padding: 20px 20px 16px 20px; /* pt-5 pb-4 px-5 */
+}
+
+
+.bank-card_icon {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: var(--bank-gradient); /* Assuming you have a predefined gradient */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 20px; /* Equivalent to py-5 */
+  padding-right: 20px; /* Equivalent to pr-5 */
+}
+
+  /* Bank Info */
+  .bank-info {
+    display: flex;
+    gap: 18px;
+    padding: 16px; /* Equivalent to p-4 */
+    transition: all 0.2s ease-in-out; /* Equivalent to transition-all */
+    border: 1px solid transparent; /* Equivalent to border-transparent */
+    background-color: var(--blue-25); /* Assuming --blue-25 is defined in your color variables */
+}
+
+
+  /* Category Badge */
+  .category-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Equivalent to flex-center */
+    white-space: nowrap; /* Equivalent to truncate */
+    width: fit-content; /* Equivalent to w-fit */
+    gap: 4px; /* Equivalent to gap-1 */
+    border-radius: 16px; /* Equivalent to rounded-2xl */
+    border: 1.5px solid; /* Equivalent to border-[1.5px] */
+    padding: 2px 8px 2px 6px; /* Equivalent to py-[2px] pl-1.5 pr-2 */
+}
+
+
+.banktab-item {
+  display: flex;
+  gap: 18px; /* Equivalent to gap-[18px] */
+  border-bottom: 2px solid; /* Equivalent to border-b-2 */
+  padding: 8px 8px; /* Equivalent to py-2 px-2 */
+  transition: all 0.3s ease-in-out; /* Equivalent to transition-all */
+}
+
+@media (min-width: 640px) { /* Equivalent to sm:px-4 */
+  .banktab-item {
+      padding-left: 16px;
+      padding-right: 16px;
+  }
+}
+
+
+  /* Mobile nav */
+  .mobilenav-sheet {
+    display: flex;
+    height: calc(100vh - 72px); /* Adjust height dynamically */
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto; /* Allows scrolling when content overflows */
+}
+
+
+.mobilenav-sheet_close {
+  display: flex;
+  gap: 12px; /* Equivalent to gap-3 */
+  align-items: center;
+  padding: 16px; /* Equivalent to p-4 */
+  border-radius: 8px; /* Equivalent to rounded-lg */
+  width: 100%;
+  max-width: 15rem; /* Equivalent to max-w-60 */
+}
+
+
+  /* PlaidLink */
+  .plaidlink-primary {
+    font-size: 16px; /* Equivalent to text-16 */
+    border-radius: 8px; /* Equivalent to rounded-lg */
+    border: 1px solid var(--bankGradient); /* Equivalent to border-bankGradient */
+    background: var(--bank-gradient); /* Equivalent to bg-bank-gradient */
+    font-weight: 600; /* Equivalent to font-semibold */
+    color: white; /* Equivalent to text-white */
+    box-shadow: var(--shadow-form); /* Equivalent to shadow-form */
+}
+
+.plaidlink-ghost {
+  display: flex; /* Equivalent to flex */
+  cursor: pointer; /* Equivalent to cursor-pointer */
+  align-items: center; /* Equivalent to items-center */
+  justify-content: center; /* Default justify-center */
+  gap: 12px; /* Equivalent to gap-3 */
+  border-radius: 8px; /* Equivalent to rounded-lg */
+  padding: 28px 12px; /* Equivalent to px-3 py-7 */
+  transition: background-color 0.2s ease-in-out;
+}
+
+.plaidlink-ghost:hover {
+  background-color: white; /* Equivalent to hover:bg-white */
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+  .plaidlink-ghost {
+      justify-content: flex-start; /* Equivalent to lg:justify-start */
+  }
+}
+
+
+.plaidlink-default {
+  display: flex; /* Enables flexbox */
+  justify-content: flex-start !important; /* Forces left alignment */
+  cursor: pointer; /* Changes cursor to pointer */
+  gap: 12px; /* Spacing between elements */
+  border-radius: 8px; /* Rounded corners */
+  background-color: transparent !important; /* Ensures transparency */
+  flex-direction: row; /* Ensures horizontal layout */
+}
+
+
+  /* Auth */
+  .auth-asset {
+    display: flex; /* Enables flexbox */
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width */
+    position: sticky; /* Sticks to the top */
+    top: 0; /* Ensures it stays at the top */
+    align-items: center; /* Centers items vertically */
+    justify-content: flex-end; /* Aligns content to the right */
+    background-color: var(--sky-1); /* Applies the sky-1 background */
+}
+
+@media (max-width: 1024px) { /* Hides on smaller screens */
+    .auth-asset {
+        display: none;
+    }
+}
+
+
+  /* Auth Form */
+  .auth-form {
+    display: flex; /* Enables flexbox */
+    min-height: 100vh; /* Ensures it takes at least the full viewport height */
+    width: 100%; /* Full width */
+    max-width: 420px; /* Limits the maximum width to 420px */
+    flex-direction: column; /* Stacks children vertically */
+    justify-content: center; /* Centers content vertically */
+    gap: 1.25rem; /* Default gap for spacing (5 in Tailwind) */
+    padding-top: 2.5rem; /* 10 in Tailwind */
+    padding-bottom: 2.5rem; /* 10 in Tailwind */
+}
+
+@media (min-width: 768px) { /* Adjusts gap for medium and larger screens */
+    .auth-form {
+        gap: 2rem; /* 8 in Tailwind */
+    }
+}
+
+
+.form-item {
+  display: flex; /* Enables flexbox */
+  flex-direction: column; /* Stacks children vertically */
+  gap: 0.375rem; /* 1.5 in Tailwind (6px) */
+}
+
+.form-label {
+  font-size: 14px; /* Equivalent to text-14 */
+  width: 100%;
+  max-width: 280px;
+  font-weight: 500; /* Equivalent to font-medium */
+  color: #374151; /* Equivalent to text-gray-700 */
+}
+
+
+.form-message {
+  font-size: 12px; /* Equivalent to text-12 */
+  color: #ef4444; /* Equivalent to text-red-500 */
+}
+
+
+.form-btn {
+  font-size: 16px; /* Equivalent to text-16 */
+  border-radius: 0.5rem; /* Equivalent to rounded-lg */
+  border: 1px solid var(--bankGradient); /* Equivalent to border-bankGradient */
+  background: var(--bankGradient); /* Equivalent to bg-bank-gradient */
+  font-weight: 600; /* Equivalent to font-semibold */
+  color: white; /* Equivalent to text-white */
+  box-shadow: var(--formShadow); /* Equivalent to shadow-form */
+}
+
+
+.form-link {
+  font-size: 14px; /* Equivalent to text-14 */
+  cursor: pointer; /* Equivalent to cursor-pointer */
+  font-weight: 500; /* Equivalent to font-medium */
+  color: var(--bankGradient); /* Equivalent to text-bankGradient */
+}
+
+
+  /* Payment Transfer */
+  .payment-transfer {
+    overflow-y: scroll; /* Allows vertical scrolling */
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Stacks children vertically */
+    background-color: #f7f7f7; /* Equivalent to bg-gray-25 */
+    padding: 2rem; /* Equivalent to p-8 */
+}
+
+@media (min-width: 768px) {
+    .payment-transfer {
+        max-height: 100vh; /* Equivalent to md:max-h-screen */
+    }
+}
+
+@media (min-width: 1280px) {
+    .payment-transfer {
+        padding-top: 3rem; /* Equivalent to xl:py-12 */
+        padding-bottom: 3rem;
+    }
+}
+
+/* Hide scrollbar but allow scrolling */
+.payment-transfer::-webkit-scrollbar {
+    display: none;
+}
+
+.payment-transfer {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+
+.payment-transfer_form-item {
+  display: flex; /* Enables flexbox */
+  width: 100%; /* Ensures full width */
+  max-width: 850px; /* Limits max width */
+  flex-direction: column; /* Stacks children vertically */
+  gap: 0.75rem; /* Equivalent to gap-3 */
+}
+
+@media (min-width: 768px) {
+  .payment-transfer_form-item {
+      flex-direction: row; /* Switch to horizontal layout on medium screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .payment-transfer_form-item {
+      gap: 2rem; /* Equivalent to lg:gap-8 */
+  }
+}
+
+
+.payment-transfer_form-content {
+  display: flex; /* Enables flexbox */
+  width: 100%; /* Ensures full width */
+  max-width: 280px; /* Limits max width */
+  flex-direction: column; /* Stacks children vertically */
+  gap: 0.5rem; /* Equivalent to gap-2 */
+}
+
+
+.payment-transfer_form-details {
+  display: flex; /* Enables flexbox */
+  flex-direction: column; /* Stacks children vertically */
+  gap: 0.25rem; /* Equivalent to gap-1 */
+  border-top: 1px solid #e5e7eb; /* Equivalent to border-gray-200 */
+  padding-bottom: 1.25rem; /* Equivalent to pb-5 */
+  padding-top: 1.5rem; /* Equivalent to pt-6 */
+}
+
+
+.payment-transfer_btn-box {
+  margin-top: 1.25rem; /* Equivalent to mt-5 */
+  display: flex; /* Enables flexbox */
+  width: 100%; /* Full width */
+  max-width: 850px; /* Equivalent to max-w-[850px] */
+  gap: 0.75rem; /* Equivalent to gap-3 */
+  border-color: #e5e7eb; /* Equivalent to border-gray-200 */
+  padding-top: 1.25rem; /* Equivalent to py-5 */
+  padding-bottom: 1.25rem;
+}
+
+.payment-transfer_btn {
+  font-size: 14px; /* Equivalent to text-14 */
+  width: 100%; /* Equivalent to w-full */
+  background: var(--bank-gradient); /* Assuming --bank-gradient is defined */
+  font-weight: 600; /* Equivalent to font-semibold */
+  color: white; /* Equivalent to text-white */
+  box-shadow: var(--shadow-form); /* Assuming --shadow-form is defined */
+}
+
+
+  /* Root Layout */
+  .root-layout {
+    display: flex; /* Equivalent to flex */
+    height: 4rem; /* Equivalent to h-16 (16 * 0.25rem) */
+    align-items: center; /* Equivalent to items-center */
+    justify-content: space-between; /* Equivalent to justify-between */
+    padding: 1.25rem; /* Equivalent to p-5 */
+    box-shadow: var(--shadow-creditCard); /* Assuming --shadow-creditCard is defined */
+}
+
+@media (min-width: 640px) { /* Equivalent to sm:p-8 */
+    .root-layout {
+        padding: 2rem; /* Equivalent to p-8 */
+    }
+}
+
+@media (min-width: 768px) { /* Equivalent to md:hidden */
+    .root-layout {
+        display: none;
+    }
+}
+
+
+  /* Bank Info */
+  .bank-info_content {
+    display: flex; /* Equivalent to flex */
+    flex: 1; /* Equivalent to flex-1 */
+    align-items: center; /* Equivalent to items-center */
+    justify-content: space-between; /* Equivalent to justify-between */
+    gap: 0.5rem; /* Equivalent to gap-2 (2 * 0.25rem) */
+    overflow: hidden; /* Equivalent to overflow-hidden */
+}
+
+
+  /* Footer */
+  .footer {
+    display: flex; /* Equivalent to flex */
+    cursor: pointer; /* Equivalent to cursor-pointer */
+    align-items: center; /* Equivalent to items-center */
+    justify-content: space-between; /* Equivalent to justify-between */
+    gap: 0.5rem; /* Equivalent to gap-2 (2 * 0.25rem) */
+    padding-top: 1.5rem; /* Equivalent to py-6 */
+    padding-bottom: 1.5rem; /* Equivalent to py-6 */
+}
+
+
+.footer_name {
+  display: flex; /* Equivalent to flex */
+  width: 2.5rem; /* Equivalent to size-10 (10 * 0.25rem) */
+  height: 2.5rem; /* Equivalent to size-10 (10 * 0.25rem) */
+  align-items: center; /* Equivalent to items-center */
+  justify-content: center; /* Equivalent to justify-center */
+  border-radius: 9999px; /* Equivalent to rounded-full */
+  background-color: #e5e7eb; /* Equivalent to bg-gray-200 */
+}
+
+@media (max-width: 1280px) {
+  .footer_name {
+      display: none; /* Equivalent to max-xl:hidden */
+  }
+}
+
+
+.footer_email {
+  display: flex; /* Equivalent to flex */
+  flex: 1; /* Equivalent to flex-1 */
+  flex-direction: column; /* Equivalent to flex-col */
+  justify-content: center; /* Equivalent to justify-center */
+}
+
+@media (max-width: 1280px) {
+  .footer_email {
+      display: none; /* Equivalent to max-xl:hidden */
+  }
+}
+
+
+.footer_name-mobile {
+  display: flex; /* Equivalent to flex */
+  width: 2.5rem; /* Equivalent to size-10 */
+  height: 2.5rem; /* Equivalent to size-10 */
+  align-items: center; /* Equivalent to items-center */
+  justify-content: center; /* Equivalent to justify-center */
+  border-radius: 9999px; /* Equivalent to rounded-full */
+  background-color: #e5e7eb; /* Equivalent to bg-gray-200 */
+}
+
+.footer_email-mobile {
+  display: flex; /* Enables flexbox */
+  flex: 1; /* Equivalent to flex-1 */
+  flex-direction: column; /* Equivalent to flex-col */
+  justify-content: center; /* Centers content vertically */
+}
+
+
+.footer_image {
+  position: relative; /* Equivalent to relative */
+  width: 1.25rem; /* Equivalent to size-5 (which is 20px) */
+  height: 1.25rem; /* Equivalent to size-5 (which is 20px) */
+}
+
+@media (max-width: 1280px) { /* max-xl */
+  .footer_image {
+      width: 100%; /* Equivalent to max-xl:w-full */
+      display: flex; /* Equivalent to max-xl:flex */
+      justify-content: center; /* Equivalent to max-xl:justify-center */
+      align-items: center; /* Equivalent to max-xl:items-center */
+  }
+}
+
+
+  /* Sidebar */
+  .sidebar {
+    position: sticky; /* Equivalent to sticky */
+    left: 0;
+    top: 0;
+    display: flex; /* Equivalent to flex */
+    height: 100vh; /* Equivalent to h-screen */
+    width: fit-content; /* Equivalent to w-fit */
+    flex-direction: column; /* Equivalent to flex-col */
+    justify-content: space-between; /* Equivalent to justify-between */
+    border-right: 1px solid #e5e7eb; /* Equivalent to border-r border-gray-200 */
+    background-color: white; /* Equivalent to bg-white */
+    padding-top: 2rem; /* Equivalent to pt-8 */
+    color: white; /* Equivalent to text-white */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) { /* Equivalent to max-md:hidden */
+    .sidebar {
+        display: none;
+    }
+}
+
+@media (min-width: 640px) { /* Equivalent to sm:p-4 */
+    .sidebar {
+        padding: 1rem;
+    }
+}
+
+@media (min-width: 1280px) { /* Equivalent to xl:p-6 */
+    .sidebar {
+        padding: 1.5rem;
+    }
+}
+
+@media (min-width: 1536px) { /* Equivalent to 2xl:w-[355px] */
+    .sidebar {
+        width: 355px;
+    }
+}
+
+
+.sidebar-logo {
+  font-family: 'IBM Plex Serif', serif; /* Equivalent to font-ibm-plex-serif */
+  font-size: 26px; /* Equivalent to text-[26px] */
+  font-weight: bold; /* Equivalent to font-bold */
+  color: #111; /* Assuming black-1 corresponds to #111 */
+}
+
+/* Responsive Styles */
+@media (min-width: 1536px) { /* Equivalent to 2xl:text-26 */
+  .sidebar-logo {
+      font-size: 26px;
+  }
+}
+
+@media (max-width: 1280px) { /* Equivalent to max-xl:hidden */
+  .sidebar-logo {
+      display: none;
+  }
+}
+
+
+.sidebar-link {
+  display: flex;
+  gap: 12px; /* Equivalent to gap-3 */
+  align-items: center; /* Align items in center */
+  padding: 4px 12px; /* Equivalent to py-1 md:p-3 2xl:p-4 */
+  border-radius: 8px; /* Equivalent to rounded-lg */
+  justify-content: center; /* Default: Center */
+}
+
+/* Medium Screens (md) */
+@media (min-width: 768px) {
+  .sidebar-link {
+      padding: 12px;
+  }
+}
+
+/* Extra Large Screens (2xl) */
+@media (min-width: 1536px) {
+  .sidebar-link {
+      padding: 16px;
+  }
+}
+
+/* Extra Large Screens (xl) */
+@media (min-width: 1280px) {
+  .sidebar-link {
+      justify-content: flex-start;
+  }
+}
+
+
+.sidebar-label {
+  font-size: 16px; /* Equivalent to text-16 */
+  font-weight: 600; /* Equivalent to font-semibold */
+  color: #333333; /* Equivalent to text-black-2 */
+}
+
+/* Hide on extra-large screens and below */
+@media (max-width: 1279px) {
+  .sidebar-label {
+      display: none;
+  }
+}
+
+}
